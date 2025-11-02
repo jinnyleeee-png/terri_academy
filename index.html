@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TERRI English Academy - Premium Education</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #3e2723;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #5d4037 0%, #6d4c41 100%);
+            color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            background: linear-gradient(135deg, #d4af37, #f4d03f);
+            color: #3e2723;
+            padding: 12px 30px;
+            font-weight: bold;
+            font-size: 26px;
+            border-radius: 4px;
+            letter-spacing: 3px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .tagline {
+            font-size: 14px;
+            font-style: italic;
+            opacity: 0.95;
+            letter-spacing: 1px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #d4af37;
+        }
+
+        .hero {
+            position: relative;
+            height: 550px;
+            background: linear-gradient(rgba(93, 64, 55, 0.75), rgba(109, 76, 65, 0.75)),
+                        linear-gradient(135deg, #8d6e63 0%, #a1887f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 80px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(212, 175, 55, .05) 35px, rgba(212, 175, 55, .05) 70px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .hero h1 span {
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 35px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #d4af37, #f4d03f);
+            color: #3e2723;
+            padding: 16px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.6);
+        }
+
+        .hero-image {
+            position: relative;
+            z-index: 2;
+            width: 480px;
+            height: 380px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 35px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .classroom-scene {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .shelves {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            right: 25px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+        }
+
+        .shelf-box {
+            height: 35px;
+            background: #6d4c41;
+            border-radius: 4px;
+            border: 2px solid #5d4037;
+        }
+
+        .terri-sign {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #5d4037, #6d4c41);
+            padding: 20px 45px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .terri-sign span {
+            color: #d4af37;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        .sofa {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            height: 70px;
+            background: linear-gradient(180deg, #a1887f 0%, #8d6e63 100%);
+            border-radius: 10px 10px 5px 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .sofa::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 0;
+            right: 0;
+            height: 15px;
+            background: linear-gradient(180deg, #bcaaa4 0%, #a1887f 100%);
+            border-radius: 10px 10px 0 0;
+        }
+
+        .features {
+            padding: 80px 50px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #efebe9 100%);
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 55px;
+            color: #5d4037;
+            font-weight: 700;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(93, 64, 55, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #d4af37;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(93, 64, 55, 0.2);
+        }
+
+        .feature-icon {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #6d4c41, #5d4037);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: #d4af37;
+            margin-bottom: 22px;
+            box-shadow: 0 3px 12px rgba(93, 64, 55, 0.3);
+        }
+
+        .feature-card h3 {
+            font-size: 23px;
+            margin-bottom: 16px;
+            color: #3e2723;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: #6d4c41;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .stats {
+            background: linear-gradient(135deg, #5d4037 0%, #6d4c41 100%);
+            padding: 70px 50px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(212, 175, 55, .08) 35px, rgba(212, 175, 55, .08) 70px);
+        }
+
+        .stats-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 52px;
+            margin-bottom: 12px;
+            color: #d4af37;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .stat-item p {
+            font-size: 17px;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .programs {
+            padding: 80px 50px;
+            background: white;
+        }
+
+        .programs h2 {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 55px;
+            color: #5d4037;
+            font-weight: 700;
+        }
+
+        .program-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .program-card {
+            background: linear-gradient(135deg, #8d6e63 0%, #6d4c41 100%);
+            padding: 45px 35px;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 20px rgba(93, 64, 55, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #d4af37, #f4d03f);
+        }
+
+        .program-card:nth-child(2) {
+            background: linear-gradient(135deg, #a1887f 0%, #8d6e63 100%);
+        }
+
+        .program-card:nth-child(3) {
+            background: linear-gradient(135deg, #6d4c41 0%, #5d4037 100%);
+        }
+
+        .program-card:nth-child(4) {
+            background: linear-gradient(135deg, #795548 0%, #6d4c41 100%);
+        }
+
+        .program-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 35px rgba(93, 64, 55, 0.3);
+        }
+
+        .program-card h3 {
+            font-size: 25px;
+            margin-bottom: 18px;
+            color: #d4af37;
+            font-weight: 600;
+        }
+
+        .program-card p {
+            font-size: 15px;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .contact {
+            background: linear-gradient(135deg, #3e2723 0%, #4e342e 100%);
+            color: white;
+            padding: 60px 50px;
+            text-align: center;
+        }
+
+        .contact h3 {
+            font-size: 30px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin-bottom: 12px;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            font-size: 28px;
+            color: #d4af37;
+            font-weight: 700;
+            margin-top: 25px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-section">
+            <div class="logo">TERRI</div>
+            <div class="tagline">"Think Different"</div>
+        </div>
+        <nav class="nav">
+            <a href="#programs">프로그램</a>
+            <a href="#about">소개</a>
+            <a href="#teachers">강사진</a>
+            <a href="#contact">상담문의</a>
+        </nav>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>아이포영어<br><span>실패없는</span> 영어교육을<br>선물합니다</h1>
+            <p>체계적인 커리큘럼과 전문 강사진이 함께하는<br>검증된 프리미엄 영어 교육 프로그램</p>
+            <a href="#contact" class="cta-button">무료 레벨테스트 신청</a>
+        </div>
+        <div class="hero-image">
+            <div class="classroom-scene">
+                <div class="shelves">
+                    <div class="shelf-box"></div>
+                    <div class="shelf-box"></div>
+                    <div class="shelf-box"></div>
+                    <div class="shelf-box"></div>
+                    <div class="shelf-box"></div>
+                </div>
+                <div class="terri-sign">
+                    <span>TERRI</span>
+                </div>
+                <div class="sofa"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>왜 TERRI 영어학원인가?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>체계적인 커리큘럼</h3>
+                <p>레벨별 맞춤 교육으로 단계적인 실력 향상을 보장합니다. 파닉스부터 고급 독해까지 완벽한 로드맵을 제공합니다.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👨‍🏫</div>
+                <h3>전문 강사진</h3>
+                <p>풍부한 교육 경험과 전문 자격을 갖춘 강사진이 학생 개개인의 성장을 책임집니다.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>정기 평가 시스템</h3>
+                <p>월별 학습 리포트와 정기 평가를 통해 학습 진도를 명확하게 파악하고 관리합니다.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>소규모 그룹 수업</h3>
+                <p>최대 8명의 소규모 수업으로 모든 학생이 충분한 발화 기회를 갖습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h4>15년</h4>
+                <p>영어 교육 노하우</p>
+            </div>
+            <div class="stat-item">
+                <h4>100+</h4>
+                <p>영어 원서 보유</p>
+            </div>
+            <div class="stat-item">
+                <h4>5:1</h4>
+                <p>학생 강사 비율</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs" id="programs">
+        <h2>프로그램 안내</h2>
+        <div class="program-cards">
+            <div class="program-card">
+                <h3>Pre-Ace Level 1</h3>
+                <p>파닉스, Sight Words, Storytelling을 통한 기초 다지기</p>
+            </div>
+            <div class="program-card">
+                <h3>Speaking Class</h3>
+                <p>주제별 Presentation & Storytelling 집중 훈련</p>
+            </div>
+            <div class="program-card">
+                <h3>Reading Class</h3>
+                <p>AR · Lexile · ATOS 기준 단계별 독해 프로그램</p>
+            </div>
+            <div class="program-card">
+                <h3>경쟁반(토드+스피킹)</h3>
+                <p>토익토플대비와 스피킹 완성 종합 프로그램</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h3>입학 문의 및 상담</h3>
+        <p>수원시 영통구 구법동로 25 (SK뷰메이크 15층)</p>
+        <p>평일 13:00 ~ 19:00</p>
+        <div class="contact-info">☎ 070.4833.2069</div>
+    </section>
+</body>
+</html>
