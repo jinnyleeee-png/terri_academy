@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TERRI English Academy - 1000권 영어도서관 & 스피킹 전문</title>
+    <title>TERRI English Academy - 수원 영통 1000권 영어도서관 & 스피킹 전문 학원</title>
+    
+    <!-- SEO 메타태그 -->
+    <meta name="description" content="수원 영통구 테리영어학원. 1000권 이상의 영어 원서 도서관과 AR리딩, 스피킹 전문 프로그램. 유치부부터 초등, 중등까지 레벨별 맞춤 수업. 070-4833-2069">
+    <meta name="keywords" content="수원영어학원, 영통영어학원, 영어도서관, AR리딩, 영어원서, 스피킹학원, 테리영어학원, TERRI, 초등영어, 유치부영어, 수원학원">
+    <meta name="author" content="TERRI English Academy">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (SNS 공유용) -->
+    <meta property="og:title" content="TERRI English Academy - 수원 영통 1000권 영어도서관">
+    <meta property="og:description" content="1000권 이상의 영어 원서와 체계적인 스피킹 프로그램으로 진정한 영어 실력을 완성합니다">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jinnyleeee-png.github.io/terri_academy">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1200">
+    
+    <!-- 네이버 검색 최적화 -->
+    <meta name="naver-site-verification" content=""/>
+    <link rel="canonical" href="https://jinnyleeee-png.github.io/terri_academy">
     <style>
         * {
             margin: 0;
@@ -214,10 +231,21 @@
         /* Library Highlight Section */
         .library-highlight {
             position: relative;
-            background: #4a2f1a;
+            background: linear-gradient(rgba(74, 47, 26, 0.92), rgba(61, 36, 23, 0.92)),
+                        url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1600') center/cover;
             padding: 120px 40px;
             color: #f5e6d3;
             text-align: center;
+        }
+
+        .library-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.4) 100%);
         }
 
         .library-content {
@@ -290,13 +318,27 @@
         /* AR Reading Section */
         .ar-section {
             padding: 100px 40px;
-            background: linear-gradient(135deg, #f5e6d3 0%, #e8d4ba 100%);
+            background: linear-gradient(rgba(245, 230, 211, 0.96), rgba(232, 212, 186, 0.96)),
+                        url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=1600') center/cover;
             text-align: center;
+            position: relative;
+        }
+
+        .ar-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at top, transparent 0%, rgba(245, 230, 211, 0.5) 100%);
         }
 
         .ar-content {
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .ar-badge {
@@ -697,5 +739,52 @@
         <p>&copy; 2024 TERRI English Academy. All rights reserved.</p>
         <p style="margin-top: 10px;">아이포영어 실패없는 영어교육을 선물합니다</p>
     </footer>
+
+    <!-- 구조화된 데이터 (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "TERRI English Academy",
+        "alternateName": "테리영어학원",
+        "description": "1000권 이상의 영어 원서 도서관과 AR리딩, 스피킹 전문 프로그램을 제공하는 수원 영통 영어학원",
+        "url": "https://jinnyleeee-png.github.io/terri_academy",
+        "telephone": "+82-70-4833-2069",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "수원시",
+            "addressRegion": "경기도",
+            "streetAddress": "영통구 구법동로 25 SK뷰메이크 15층",
+            "addressCountry": "KR"
+        },
+        "openingHours": "Mo-Fr 13:00-19:00",
+        "areaServed": {
+            "@type": "City",
+            "name": "수원시"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "영어 교육 프로그램",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Course",
+                        "name": "1000권 영어 원서 도서관",
+                        "description": "레벨별 맞춤 리딩 프로그램"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Course",
+                        "name": "스피킹 전문 프로그램",
+                        "description": "Presentation, Storytelling, Discussion & Debate"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
 </body>
 </html>
