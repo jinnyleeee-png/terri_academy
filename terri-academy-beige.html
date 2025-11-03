@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TERRI English Academy - 수원 영통 1000권 영어도서관 & 스피킹 전문 학원</title>
+    
+    <!-- SEO 메타태그 -->
+    <meta name="description" content="수원 영통구 테리영어학원. 1000권 이상의 영어 원서 도서관과 AR리딩, 스피킹 전문 프로그램. 유치부부터 초등, 중등까지 레벨별 맞춤 수업. 070-4833-2069">
+    <meta name="keywords" content="수원영어학원, 영통영어학원, 영어도서관, AR리딩, 영어원서, 스피킹학원, 테리영어학원, TERRI, 초등영어, 유치부영어, 수원학원">
+    <meta name="author" content="TERRI English Academy">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (SNS 공유용) -->
+    <meta property="og:title" content="TERRI English Academy - 수원 영통 1000권 영어도서관">
+    <meta property="og:description" content="1000권 이상의 영어 원서와 체계적인 스피킹 프로그램으로 진정한 영어 실력을 완성합니다">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jinnyleeee-png.github.io/terri_academy">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1200">
+    
+    <!-- 네이버 검색 최적화 -->
+    <meta name="naver-site-verification" content=""/>
+    <link rel="canonical" href="https://jinnyleeee-png.github.io/terri_academy">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #3d2417;
+            line-height: 1.6;
+            background: #f5e6d3;
+        }
+
+        /* Top Nav */
+        .top-nav {
+            background: #4a2f1a;
+            padding: 10px 0;
+        }
+
+        .top-nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+            font-size: 14px;
+        }
+
+        .top-nav a {
+            color: #f5e6d3;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .top-nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Main Header */
+        .main-header {
+            background: #f5e6d3;
+            border-bottom: 2px solid #4a2f1a;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(74, 47, 26, 0.1);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .academy-logo {
+            background: #4a2f1a;
+            color: #f5e6d3;
+            padding: 15px 50px;
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: 10px;
+            font-family: 'Lora', 'Georgia', serif;
+            box-shadow: 0 4px 15px rgba(74, 47, 26, 0.3);
+            border-radius: 5px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: #6b4423;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .main-nav a {
+            color: #4a2f1a;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .main-nav a:hover {
+            color: #8b4513;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 120px 40px;
+            background: linear-gradient(rgba(232, 212, 186, 0.95), rgba(212, 192, 168, 0.95)),
+                        url('https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1600') center/cover;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(232, 212, 186, 0.3) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 68px;
+            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #4a2f1a;
+            font-family: 'Lora', 'Georgia', serif;
+        }
+
+        .hero-highlight {
+            display: block;
+            font-size: 52px;
+            color: #8b4513;
+            margin: 25px 0;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4a2f1a 0%, #8b4513 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 26px;
+            margin-bottom: 50px;
+            font-weight: 300;
+            line-height: 1.7;
+            color: #5d4a3a;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #4a2f1a;
+            color: #f5e6d3;
+            padding: 20px 50px;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .btn-primary:hover {
+            background: #5d3a22;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(74, 47, 26, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #4a2f1a;
+            padding: 20px 50px;
+            border: 3px solid #4a2f1a;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .btn-secondary:hover {
+            background: #4a2f1a;
+            color: #f5e6d3;
+        }
+
+        /* Library Highlight Section */
+        .library-highlight {
+            position: relative;
+            background: linear-gradient(rgba(74, 47, 26, 0.92), rgba(61, 36, 23, 0.92)),
+                        url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1600') center/cover;
+            padding: 120px 40px;
+            color: #f5e6d3;
+            text-align: center;
+        }
+
+        .library-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.4) 100%);
+        }
+
+        .library-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .library-number {
+            font-size: 160px;
+            font-weight: 800;
+            color: #f5e6d3;
+            margin-bottom: 20px;
+            font-family: 'Lora', 'Georgia', serif;
+            letter-spacing: 8px;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+        }
+
+        .library-title {
+            font-size: 54px;
+            margin-bottom: 35px;
+            font-weight: 400;
+            letter-spacing: 3px;
+        }
+
+        .library-description {
+            font-size: 26px;
+            max-width: 900px;
+            margin: 0 auto 70px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .library-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            max-width: 1300px;
+            margin: 60px auto 0;
+        }
+
+        .library-feature {
+            padding: 50px 40px;
+            background: rgba(245, 230, 211, 0.1);
+            border: 2px solid rgba(245, 230, 211, 0.2);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s;
+        }
+
+        .library-feature:hover {
+            transform: translateY(-10px);
+            background: rgba(245, 230, 211, 0.15);
+            border-color: rgba(245, 230, 211, 0.4);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .library-feature h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #f5e6d3;
+            font-weight: 600;
+        }
+
+        .library-feature p {
+            font-size: 17px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* AR Reading Section */
+        .ar-section {
+            padding: 100px 40px;
+            background: linear-gradient(rgba(245, 230, 211, 0.96), rgba(232, 212, 186, 0.96)),
+                        url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=1600') center/cover;
+            text-align: center;
+            position: relative;
+        }
+
+        .ar-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at top, transparent 0%, rgba(245, 230, 211, 0.5) 100%);
+        }
+
+        .ar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ar-badge {
+            display: inline-block;
+            background: #4a2f1a;
+            color: #f5e6d3;
+            padding: 20px 60px;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            letter-spacing: 5px;
+        }
+
+        .ar-title {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #4a2f1a;
+            font-weight: 600;
+        }
+
+        .ar-description {
+            font-size: 24px;
+            color: #5d4a3a;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Speaking Focus Section */
+        .speaking-section {
+            padding: 100px 40px;
+            background: #f5e6d3;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 25px;
+            color: #4a2f1a;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 22px;
+            color: #6b4423;
+            margin-bottom: 70px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .speaking-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .speaking-card {
+            padding: 50px 40px;
+            background: white;
+            border-left: 6px solid #4a2f1a;
+            transition: all 0.3s;
+            border-radius: 5px;
+        }
+
+        .speaking-card:hover {
+            background: #fefdfb;
+            box-shadow: 0 12px 40px rgba(74, 47, 26, 0.2);
+            transform: translateX(8px);
+        }
+
+        .speaking-number {
+            font-size: 68px;
+            color: #4a2f1a;
+            font-weight: 700;
+            margin-bottom: 25px;
+            opacity: 0.2;
+        }
+
+        .speaking-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #4a2f1a;
+            font-weight: 600;
+        }
+
+        .speaking-description {
+            font-size: 17px;
+            color: #5d4a3a;
+            line-height: 1.8;
+        }
+
+        /* Programs Section */
+        .programs-section {
+            padding: 100px 40px;
+            background: linear-gradient(135deg, #e8d4ba 0%, #d4c0a8 100%);
+        }
+
+        .programs-table {
+            max-width: 1400px;
+            margin: 50px auto 0;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(74, 47, 26, 0.15);
+        }
+
+        .programs-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .programs-table th {
+            background: #4a2f1a;
+            color: #f5e6d3;
+            padding: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .programs-table td {
+            padding: 22px;
+            border-bottom: 1px solid #e8d4ba;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .programs-table tr:hover {
+            background: #fefdfb;
+        }
+
+        .program-name {
+            font-weight: 600;
+            color: #4a2f1a;
+        }
+
+        .program-level {
+            color: #6b4423;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: #4a2f1a;
+            color: #f5e6d3;
+            padding: 100px 40px;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            font-size: 46px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            font-size: 22px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .contact-phone {
+            font-size: 42px;
+            color: #f5e6d3;
+            font-weight: 700;
+            margin: 40px 0;
+            letter-spacing: 3px;
+        }
+
+        .contact-address {
+            font-size: 19px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        .footer {
+            background: #3d2417;
+            color: rgba(245, 230, 211, 0.7);
+            padding: 40px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 42px; }
+            .hero-highlight { font-size: 34px; }
+            .hero-subtitle { font-size: 20px; }
+            .library-number { font-size: 90px; }
+            .library-title { font-size: 38px; }
+            .main-nav { display: none; }
+            .academy-logo { font-size: 32px; padding: 12px 35px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="top-nav-content">
+            <a href="#students">학생</a>
+            <a href="#parents">학부모</a>
+            <a href="#visitors">방문자</a>
+            <a href="#contact">문의</a>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="academy-logo">TERRI</div>
+                <div class="tagline">"Think Different"</div>
+            </div>
+            <nav class="main-nav">
+                <a href="#library">도서관</a>
+                <a href="#speaking">스피킹</a>
+                <a href="#programs">프로그램</a>
+                <a href="#about">소개</a>
+                <a href="#contact">문의</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>TERRI English Academy</h1>
+            <span class="hero-highlight">1000권 영어도서관 & 스피킹 전문</span>
+            <p class="hero-subtitle">풍부한 원서 라이브러리와 체계적인 스피킹 프로그램으로<br>진정한 영어 실력을 완성합니다</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">무료 상담 신청</a>
+                <a href="#library" class="btn-secondary">도서관 둘러보기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library Highlight -->
+    <section class="library-highlight" id="library">
+        <div class="library-content">
+            <div class="library-number">1,000+</div>
+            <h2 class="library-title">영어 원서 도서관</h2>
+            <p class="library-description">엄선된 1000권 이상의 영어 원서로 구성된 프리미엄 도서관에서<br>레벨별 맞춤 리딩 프로그램을 경험하세요</p>
+            
+            <div class="library-features">
+                <div class="library-feature">
+                    <h3>📖 레벨별 원서</h3>
+                    <p>초급부터 고급까지 체계적으로 분류된 영어 원서 컬렉션</p>
+                </div>
+                <div class="library-feature">
+                    <h3>📊 AR/Lexile 기반</h3>
+                    <p>AR, Lexile, ATOS 기준으로 정확한 레벨 매칭</p>
+                </div>
+                <div class="library-feature">
+                    <h3>🎭 다양한 장르</h3>
+                    <p>소설, 논픽션, 그래픽노블 등 풍부한 장르별 도서</p>
+                </div>
+                <div class="library-feature">
+                    <h3>⭐ 최신 베스트셀러</h3>
+                    <p>매달 업데이트되는 최신 영어 원서 및 베스트셀러</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AR Reading Section -->
+    <section class="ar-section">
+        <div class="ar-content">
+            <div class="ar-badge">AR리딩지수</div>
+            <h2 class="ar-title">우리 아이는 어느 단계일까?</h2>
+            <p class="ar-description">테리영어학원 Reading Class는 이렇게 달라요!<br>레벨별로 체계적인 IC형 북퀘스트+상담 지원 해보세요!</p>
+        </div>
+    </section>
+
+    <!-- Speaking Focus -->
+    <section class="speaking-section" id="speaking">
+        <h2 class="section-title">Speaking Focused Program</h2>
+        <p class="section-subtitle">단순히 읽고 듣는 것을 넘어, 실제로 말할 수 있는 영어 실력을 키웁니다</p>
+        
+        <div class="speaking-grid">
+            <div class="speaking-card">
+                <div class="speaking-number">01</div>
+                <h3 class="speaking-title">Presentation Skills</h3>
+                <p class="speaking-description">주제별 발표 훈련을 통해 논리적이고 자신감 있는 영어 발표 능력을 키웁니다</p>
+            </div>
+            <div class="speaking-card">
+                <div class="speaking-number">02</div>
+                <h3 class="speaking-title">Storytelling</h3>
+                <p class="speaking-description">읽은 책을 자신의 언어로 재구성하여 표현하는 스토리텔링 훈련</p>
+            </div>
+            <div class="speaking-card">
+                <div class="speaking-number">03</div>
+                <h3 class="speaking-title">Discussion & Debate</h3>
+                <p class="speaking-description">주제 토론과 디베이트를 통한 비판적 사고와 논리적 표현 능력 향상</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Table -->
+    <section class="programs-section" id="programs">
+        <h2 class="section-title">수강 프로그램</h2>
+        <p class="section-subtitle">레벨과 목적에 맞는 최적의 프로그램을 선택하세요</p>
+        
+        <div class="programs-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>프로그램</th>
+                        <th>주당 횟수</th>
+                        <th>총 시간</th>
+                        <th>수강료</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="program-name">정규반(화,목)<br>Reading+Speaking</td>
+                        <td class="program-level">Lower Elementary (G1-2) Starter</td>
+                        <td>주 2회</td>
+                        <td>240분</td>
+                        <td><strong>32만원</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="program-level">Lower Elementary (G1-2) Mover</td>
+                        <td>주 2회</td>
+                        <td>240분</td>
+                        <td><strong>32만원</strong></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="program-name">정규반(수,금)<br>Reading+Speaking</td>
+                        <td class="program-level">Middle Elementary (G3-4) Basic</td>
+                        <td>주 2회</td>
+                        <td>240분</td>
+                        <td><strong>34만원</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="program-level">Middle Elementary (G3-4) Intermediate</td>
+                        <td>주 2회</td>
+                        <td>240분</td>
+                        <td><strong>34만원</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="program-name">Special Class (골)</td>
+                        <td class="program-level">단일과목수강가, Text Book Class</td>
+                        <td>주 1회</td>
+                        <td>(+)60분</td>
+                        <td><strong>10만원</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="program-name">고학년<br>Reading+Speaking</td>
+                        <td class="program-level">Upper Elementary</td>
+                        <td>주 2회</td>
+                        <td>120분</td>
+                        <td><strong>22만원</strong></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="program-name">유치부<br>Reading+Speaking</td>
+                        <td class="program-level">Pre-English Class (주2회)</td>
+                        <td>주 2회</td>
+                        <td>120분</td>
+                        <td><strong>20만원</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="program-level">Pre-English Class (주3회)</td>
+                        <td>주 3회</td>
+                        <td>180분</td>
+                        <td><strong>30만원</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+        <div class="contact-content">
+            <h2 class="contact-title">입학 문의 및 상담</h2>
+            <p class="contact-info">1000권 영어도서관과 전문 스피킹 프로그램,<br>TERRI에서 시작하세요</p>
+            <div class="contact-phone">☎ 070.4833.2069</div>
+            <p class="contact-address">
+                수원시 영통구 구법동로 25 (SK뷰메이크 15층)<br>
+                평일 13:00 ~ 19:00
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 TERRI English Academy. All rights reserved.</p>
+        <p style="margin-top: 10px;">아이포영어 실패없는 영어교육을 선물합니다</p>
+    </footer>
+
+    <!-- 구조화된 데이터 (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "TERRI English Academy",
+        "alternateName": "테리영어학원",
+        "description": "1000권 이상의 영어 원서 도서관과 AR리딩, 스피킹 전문 프로그램을 제공하는 수원 영통 영어학원",
+        "url": "https://jinnyleeee-png.github.io/terri_academy",
+        "telephone": "+82-70-4833-2069",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "수원시",
+            "addressRegion": "경기도",
+            "streetAddress": "영통구 구법동로 25 SK뷰메이크 15층",
+            "addressCountry": "KR"
+        },
+        "openingHours": "Mo-Fr 13:00-19:00",
+        "areaServed": {
+            "@type": "City",
+            "name": "수원시"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "영어 교육 프로그램",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Course",
+                        "name": "1000권 영어 원서 도서관",
+                        "description": "레벨별 맞춤 리딩 프로그램"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Course",
+                        "name": "스피킹 전문 프로그램",
+                        "description": "Presentation, Storytelling, Discussion & Debate"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</body>
+</html>
